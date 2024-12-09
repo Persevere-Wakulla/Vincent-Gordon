@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+
+}
+
+button {
+    background-color: #000;
+    border-radius: 25px;
+    color: #fff;
+    padding: 6px 15px;
+    font-size: 11px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 1000ms ease-in-out 1s;
+}
+
+button:hover,
+button:focus-visible {
+    opacity: .9;
+    transform: translatey(-0.08rem) scaleX(1.01);
+    transition: transform 250ms;
+    transition-delay: .2s;
+}
+
+.btn2 {
+    background-color: #EB7565;
+    border-radius: 25px;
+    color: #fff;
+    padding: 6px 15px;
+    font-size: 11px;
+    border: none;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.f3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+
+}
+
+p {
+    font-size: 12px;
+    opacity: .6;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: "item1 item1 item2 item3 item4 item4"
+        "item1 item1 item5 item5 item6 item6";
+    gap: 1em;
+    ;
+
+}
+
+#grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 1.5em;
+    line-height: 1.2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#item1 {
+    grid-area: item1;
+    background-color: #755CDE;
+    display: grid;
+    color: #fff;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item2 {
+    grid-area: item2;
+    background-color: #F6A560;
+    display: grid;
+    color: #fff;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item3 {
+    grid-area: item3;
+    display: grid;
+    background-color: #F39E9E;
+    color: #fff;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item4 {
+    grid-area: item4;
+    display: grid;
+    color: #fff;
+    background-color: #61C4B7;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item5 {
+    grid-area: item5;
+    display: grid;
+    color: #fff;
+    background-color: #EB7565;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item6 {
+    grid-area: item6;
+    display: grid;
+    color: #fff;
+    background-color: #552049;
+    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.img-align {
+    justify-self: end;
+    width: 30%;
+    box-shadow: none;
+    border-radius: 0%;
+}
+
+.txt-align {
+    justify-self: start;
+}
+
+.p {
+    padding: 10px;
+}
+
+.mid {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.b {
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.t {
+    color: #fff;
+}
+
+#cont {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Position the image container (needed to position the left and right arrows */
+.container {
+    position: relative;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-areas: ". pos .";
+    gap: 1em;
+    padding: 0;
+
+}
+
+.pos {
+    grid-area: pos;
+    display: grid;
+    justify-self: center;
+    padding: 0;
+
+}
+
+/* Hide images by default */
+.mySlides {
+    display: none;
+    padding: 0;
+}
+
+/* Add a pointer when hovering over thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    color: #1a1919;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+
+}
+
+
+
+/*  On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/5 etc) */
+.nuntxt {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: #cf0f0f;
+    border-radius: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 5 columns side by side */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0;
+}
+
+/* Add transparency effect for thumbnail images */
+.demo {
+    opacity: 0.6;
+    border: solid #fff 3px;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+.f2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+#caption {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.row {
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    #grid-container {
+        display: grid;
+        grid-template-areas: "item1 item1 item2 item3"
+            "item1 item1 item5 item5"
+            " item4 item4 item6 item6 ";
+        gap: 1em;
+        ;
+
+    }
+
+    #grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 1.5em;
+        line-height: 1.2;
+    }
+
+    .f2,
+    .b {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .p1 {
+        padding: 0 8%;
+    }
+}
+
+@media (max-width: 425px) {
+    #grid-container {
+        display: grid;
+        grid-template-areas: "item1 item1"
+            "item1 item1"
+            "item2 item3"
+            " item4 item4"
+            "item5 item5"
+            " item6 item6 ";
+        gap: 1em;
+        ;
+
+    }
+
+    #grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 1.5em;
+        line-height: 1.2;
+    }
+
+    .f {
+        display: block;
+    }
+
+    .p1 {
+        padding: 0;
+    }
+
+}

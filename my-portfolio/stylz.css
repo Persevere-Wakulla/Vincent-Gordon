@@ -1,0 +1,667 @@
+* {
+    padding: 8px;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.main-container {
+    position: absolute;
+    top: 0;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 20px;
+    align-items: flex-end;
+    margin: inline 4px;
+   
+}
+
+/* Utility Library */
+.animate {
+    animation-duration: 1000ms;
+}
+
+.animate.animate--infinite {
+    animation-iteration-count: 2;
+}
+
+.animate.animate--delay-1s {
+    animation-delay: 1s;
+}
+
+.animate.animate--fast {
+    animation-duration: .5s;
+}
+
+.animate.animate--slow {
+    animation-duration: 1s;
+}
+
+.animate.animate--5s {
+    animation-duration: 2s;
+}
+
+.animate.animate--easein {
+    animation-timing-function: ease-in;
+}
+
+.animate.animate--fillmode {
+    animation-fill-mode: forwards;
+}
+
+/* animation  library */
+.midslide {
+    animation-name: midslide;
+    animation-timing-function: ease-in-out;
+}
+
+.btmrslide {
+    animation-name: btmrslide;
+    animation-timing-function: ease-in-out;
+}
+
+.lftslide {
+    animation-name: lftslide;
+    animation-timing-function: ease-in-out;
+}
+
+.rotate {
+    animation: rotate .1s infinite linear paused;
+}
+
+.fadein {
+    animation-name: fadein;
+
+}
+
+
+/* keyframes library */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .2;
+    }
+
+    40% {
+        opacity: .4;
+    }
+
+    60% {
+        opacity: .6;
+    }
+
+    80% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        transform: skew(180deg, -180deg);
+    }
+
+    30% {
+        transform: skew(-180deg, 180deg);
+    }
+
+    40% {
+        transform: skew(180deg, -180deg);
+    }
+
+    70% {
+        transform: skew(-180deg, 180deg);
+    }
+
+    100% {
+        transform: skew(180deg, -180deg);
+    }
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    hover {
+        animation-play-state: running;
+    }
+}
+
+@keyframes midslide {
+    from {
+
+        transform: translateX(922px) translateY(-102px);
+
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+    0% {
+        rotate: -2080deg;
+    }
+
+    30% {
+        rotate: -720deg;
+    }
+
+    60% {
+        rotate: 2000deg;
+    }
+
+    80% {
+        rotate: 1080deg;
+    }
+
+    100% {
+        rotate: -5000deg;
+    }
+}
+
+
+@keyframes btmrslide {
+    from {
+        transform: translatex(900px) translatey(400px);
+
+    }
+
+    to {
+        transform: translateX(0);
+
+    }
+
+    0% {
+        scale: .5;
+    }
+
+    20% {
+        scale: .2;
+    }
+
+    30% {
+        scale: 0;
+    }
+
+    40% {
+        scale: .2;
+    }
+
+    60% {
+        scale: 2;
+    }
+
+    70% {
+        scale: .5;
+    }
+
+    80% {
+        scale: 4;
+    }
+
+    100% {
+        scale: 0;
+    }
+}
+
+@keyframes lftslide {
+    from {
+        transform: translateX(-922px) translatey(-102px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.background-image {
+    background-image: url(./assets/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(16px 16px 20px rgb(238, 5, 5)) invert(75%) opacity(80%);
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    color: #b5e7f7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: .5em;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(to right, hsl(187, 91%, 69%), hsl(62, 36%, 57%), hsl(240, 50%, 50%), hsl(1, 30%, 30%), hsl(300, 30%, 30%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+body {
+    background-color: hsl(120, 18%, 36%);
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+
+}
+
+.header-image {
+    transform: rotateZ(0.36turn);
+    position: absolute;
+    top: 20px;
+    border-radius: 50%;
+    rotate: 0deg;
+    transition: rotate 3s ease-in;
+}
+
+.header-image:hover {
+    rotate: -720deg;
+    cursor: grab;
+}
+
+.header-image__bg {
+    transform: rotate(0.04turn) scale(0.4) translate(-100%, -105%);
+    position: absolute;
+    top: 90px;
+}
+
+.header-image__menu {
+    transform: scale(1.5) rotate(0.248turn);
+    position: absolute;
+    right: 0;
+    top: -25px;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+* style the dropdown button */ .dropbtn {
+    color: #eee;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: grab;
+}
+
+/* The container <div>- needed to position the dropdown content. */
+.dropdown {
+    position: relative;
+    top: -90%;
+    display: flex;
+}
+
+/* flex menu */
+.dropdown-menu {
+    display: flex;
+
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 5%;
+    background: radial-gradient(hsl(180, 50%, 50%), hsl(90, 50%, 50%), hsl(240, 50%, 50%), hsl(360, 50%, 50%));
+    min-width: 160px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background: radial-gradient(hsl(10, 50%, 50%), hsl(280, 50%, 50%), hsl(40, 50%, 50%), hsl(250, 50%, 50%), hsl(100, 50%, 50%), hsl(150, 50%, 50%));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: hsl(195, 91%, 25%);
+    scale: 1;
+}
+
+/* This section styles my image map */
+.image-map__container {
+    background-color: hsl(162, 36%, 57%);
+    padding: 5%;
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.image-map__h1 {
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(to right, hsl(123, 87%, 22%), hsl(251, 95%, 41%), hsl(19, 94%, 44%), hsl(305, 93%, 28%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+map:hover {
+    cursor: pointer;
+}
+
+/* Position the image container (needed to position the left and right arrows */
+.container {
+    position: relative;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-areas: " pos ";
+    gap: 1em;
+    padding: 20px;
+}
+
+.pos {
+    grid-area: pos;
+    display: grid;
+    justify-self: center;
+    padding: 0;
+
+}
+
+/* Hide images by default */
+.mySlides {
+    display: none;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mySlides:hover {
+    scale: 2;
+    opacity: .6;
+}
+
+/* Add a pointer when hovering over thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    color: hsl(0, 12%, 97%);
+    background-color: #69b9a1;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 25px;
+    padding: 0px 0px 5px 0px;
+    border: 2px solid #222;
+    box-shadow: 1px 2px 10px 2px rgb(157, 243, 236);
+}
+
+
+
+/*  On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:active,
+.next:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Number text (1/5 etc) */
+.nuntxt {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #69b9a1;
+    padding: 4px;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 5 columns side by side */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Add transparency effect for thumbnail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+    scale: 1.01;
+
+}
+
+.f2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+#caption {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 1px 4px 2px hsla(0, 0%, 100%, 0.15), inset -1px 2px 0 hsla(0, 0%, 0%, 0.1);
+    margin-top: -100px;
+}
+
+.image-gallery__caption {
+    background: radial-gradient(hsl(123, 87%, 22%), hsl(251, 95%, 41%), hsl(19, 94%, 44%), hsl(305, 93%, 28%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.row {
+    padding: 0;
+    height: fit-content;
+}
+
+.f3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15em;
+    padding: 10px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #69b9a1;
+}
+
+.footer-container {
+    background-image: url(./assets/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -8px right 5%;
+    margin-top: -40px;
+
+}
+
+.form {
+    display: grid;
+    place-content: center;
+    padding: 10%;
+    border: 2px solid cadetblue;
+    width: max-content;
+    color: #024d57;
+    font-size: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    resize: both;
+}
+
+.form-flex {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input {
+    width: 85% !important;
+
+}
+
+
+
+.ccv-length {
+    width: 100%;
+}
+
+label {
+    margin: 0;
+}
+
+input {
+    margin-top: 1%;
+    padding: 3.5% 0% 3.5% 1%;
+    border: 2px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+    box-shadow: 0 2px 0 hsla(0, 0%, 100%, 0.15), inset 0px 2px 0 hsla(0, 0%, 0%, 0.1);
+    caret-color: #90f333;
+    color: #69b9a1;
+}
+
+label {
+    padding-top: 5%;
+    margin-top: 2%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5%;
+    gap: 2em;
+
+}
+
+.form-flex2 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+button {
+    background-color: #a6f35f;
+    color: #024d57;
+    border: solid 2px white;
+    border-radius: 4px;
+    margin-top: 10%;
+    padding: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 1000ms ease-in-out 1s;
+
+}
+
+button:hover,
+button:focus-visible {
+    opacity: .9;
+    transform: translatey(-0.08rem) scaleX(1.01);
+    transition: transform 250ms;
+    transition-delay: .2s;
+    background-color: #085068;
+    color: #eee;
+}
+
+button:active {
+    scale: .9;
+    opacity: 1;
+    background-color: #a6f35f;
+}
+
+input:focus {
+    border: 1px solid white;
+
+}
+
+input:invalid {
+    background-color: #fddcb1;
+    outline: 2px solid #a6f35f;
+}
+
+input::placeholder {
+    color: hsl(167, 50%, 50%);
+}
+
+input[type=radio]:active {
+    scale: 1.1;
+   }
+
+.message {
+    display: none;
+    color: var(--Red);
+}
+
+fieldset {
+    box-shadow: 1px 4px 2px hsla(0, 0%, 100%, 0.15), inset -1px 2px 0 hsla(0, 0%, 0%, 0.1);
+}

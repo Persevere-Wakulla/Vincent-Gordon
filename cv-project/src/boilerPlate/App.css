@@ -1,0 +1,7 @@
+.section-container {
+    margin: 0 auto;
+    width: 66%;
+    background-color: rgb(219, 252, 160);
+    display: flex;
+    flex-direction: column;
+}

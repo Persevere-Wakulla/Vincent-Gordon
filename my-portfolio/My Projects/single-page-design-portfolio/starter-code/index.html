@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="Vincent M G Delemos">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylz.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/portfoliofavi.png">
+
+
+  <title>Frontend Mentor | Single-page design portfolio</title>
+</head>
+
+<body>
+  <main>
+    <section class="top">
+      <img src="./assets/logo.svg" alt="logo" width="50">
+      <form action="#">
+        <button formaction="../../../index.html" type="submit">Free Consultation</button>
+      </form>
+    </section>
+    <header>
+      <h1>Design solutions made easy</h1>
+
+      <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design
+        needs.</p>
+    </header>
+    <section id="cont">
+      <section id="grid-container">
+        <div id="item1"><img class="img-align" src="./assets/pattern-graphic-design.svg" alt="g">
+          <h2 class="txt-align">Graphic Design</h2>
+        </div>
+        <div id="item2"><img class="img-align" src="./assets/pattern-ui-ux.svg" alt="ux">
+          <h2 class="txt-align">UI/UX</h2>
+        </div>
+        <div id="item3"><img class="img-align" src="./assets/pattern-apps.svg" alt="app">
+          <h2 class="txt-align">Apps</h2>
+        </div>
+        <div id="item4"><img class="img-align" src="./assets/pattern-photography.svg" alt="photo">
+          <h2 class="txt-align">Photography</h2>
+        </div>
+        <div id="item5"><img class="img-align" src="./assets/pattern-illustrations.svg" alt="illustrations">
+          <h2 class="txt-align">Illustrations</h2>
+        </div>
+        <div id="item6"><img class="img-align" src="./assets/pattern-motion-graphics.svg" alt="motion">
+          <h2 class="txt-align">Motion Graphics</h2>
+        </div>
+      </section>
+      <section>
+        <div class="f">
+          <div>
+            <img src="./assets/image-amy.webp" alt="amy">
+          </div>
+          <div id="grid">
+            <h1>I’m Amy, and I’d love to work on your next project</h1>
+
+            <p class="p">I love working with others to create beautiful design solutions. I’ve designed everything from
+              brand
+              illustrations
+              to complete mobile apps. I’m also handy with a camera!</p>
+
+            <div>
+              <form action="#"><button formaction="../../../index.html" type="submit" class="btn2">Consultation</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="mid">
+      <h1 class="mid">My Work</h1>
+    </div>
+    <!-- Container for image gallery -->
+    <section class="container">
+      <!-- Full-width images with number text -->
+      <div class="grid-container2">
+        <div class="pos">
+          <div class="mySlides">
+            <div class="numtxt">1 / 5</div>
+            <img src="./assets/image-slide-1.jpg" width="" alt="New Graphic">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">2 / 5</div>
+            <img src="./assets/image-slide-2.jpg" width="100%" alt="New Design">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">3 / 5</div>
+            <img src="./assets/image-slide-3.jpg" width="100%" alt="New Template">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">4 / 5</div>
+            <img src="./assets/image-slide-4.jpg" width="100%" alt="New Seasonal">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">5 / 5</div>
+            <img src="./assets/image-slide-5.jpg" width="100%" alt="New Layout">
+          </div>
+          <!-- next and previous buttons -->
+          <div class="f3">
+            <button type="button" class="prev" onclick="plusSlides(-1)">&laquo;</button>
+
+            <button type="button" class="next" onclick="plusSlides(1)">&raquo;</button>
+          </div>
+
+        </div>
+      </div>
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="./assets/image-slide-1.jpg" onclick="currentSlide(1)" width="100%"
+            alt="New Graphic">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/image-slide-2.jpg" onclick="currentSlide(2)" width="100%"
+            alt="New Design">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/image-slide-3.jpg" onclick="currentSlide(3)" width="100%"
+            alt="New Template">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/image-slide-4.jpg" onclick="currentSlide(4)" width="100%"
+            alt="New Seasonal">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/image-slide-5.jpg" onclick="currentSlide(5)" width="100%"
+            alt="New Layout">
+        </div>
+      </div>
+    </section>
+    <section class="b t">
+      <div class="f2 b">
+        <div class="b">
+          <h3 class=" ">Book a call with me</h3>
+
+          <p class="p p1">I’d love to have a chat to see how I can help you. The best first step is for us to discuss
+            your project
+            during a
+            free consultation. Then we can move forward from there.</p>
+        </div>
+        <div class="">
+          <form action="#">
+
+            <button formaction="../../../index.html" class="btn2" type="submit">Consultation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="top">
+      <img src="./assets/logo.svg" alt="logo" width="50">
+      <form action="#">
+        <button formaction="../../../index.html" type="submit">Free Consultation</button>
+      </form>
+    </section>
+
+  </main>
+  <script src="./main.js"></script>
+</body>
+
+</html>

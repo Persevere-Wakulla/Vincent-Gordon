@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #9309af;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2c5e5e;
+    --secondary: #efd9f8;
+}
+
+body {
+    font-family: 'gabriola';
+    padding: 1rem;
+    background: var(--secondary);
+}
+ 
+p {
+    margin: 20px 0;
+}
+
+button {
+    border: 0;
+    padding: 1rem;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--primary);
+    cursor: pointer;
+}
+
+/* $ NavBar */
+
+header nav {
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header nav h1 {
+    margin-right: auto;
+    border-bottom: 3px solid var(--primary);
+}
+
+header  nav a {
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+    color: #9309af;
+    margin: 0;
+}
+
+header nav a.active {
+    color: var(--primary);
+    border-top: 1px solid var(--primary);
+}
+
+/* ^ Page Content */
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* & Help Layout */
+
+.help-layout nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.help-layout nav a {
+    padding: 10px;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.help-layout nav a:hover {
+    border-color: var(--primary);
+}
+
+.help-layout nav a.active {
+    background: var(--primary);
+}
+
+/*  #FAQ */
+
+.faq .question {
+    background: rgba(0,0,0,0.2);
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* @ Contact Form */
+.contact {
+    max-width: 1200px;
+    display: flex;
+}
+form {
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+form input, 
+form label,
+form span, 
+form textarea {
+    display: block;
+}
+
+form input, form textarea {
+    margin-bottom: 30px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 0;
+    width: 300px;
+    color: var(--secondary);
+}
+
+form label span {
+    margin-bottom: 10px;
+}
+
+.careers > a {
+    display: block;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.careers > a:hover p {
+    color: var(--primary);
+}
+
+.careers p {
+    margin: 0;
+}
+
+.careers > a p:last-child {
+    font-size: 1em;
+    color: #f5e0f5;
+}
+.careers > a p:last-child:hover {
+    color: #eeeaac;
+}
+
+/* Career details */
+.career-details {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* *BreadCrumbs */
+.breadcrumbs {
+    text-transform: capitalize;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.breadcrumbs > * {
+display: inline-block;
+margin-right: 10px;
+}
+
+.breadcrumbs .crumb:after {
+    color: rgb(135, 17, 204);
+    content: '>';
+    margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+    display: none;
+}
+.breadcrumbs .crumb a {
+    color: #077507
+}

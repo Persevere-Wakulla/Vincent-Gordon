@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+}
+
+button {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 1000ms ease-in-out 1s;
+}
+
+button:hover,
+button:focus-visible {
+    opacity: .9;
+    transform: translatey(-0.08rem) scaleX(1.01);
+    transition: transform 250ms;
+    transition-delay: .2s;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header nav nav nav "
+        "img img img aside aside aside"
+        "img img img aside aside aside"
+        "main main main aside aside aside"
+        "main main main aside aside aside"
+        "left left middle middle right right"
+        "left left middle middle right right"
+    ;
+    gap: 2em;
+    padding: 20px;
+}
+
+.header-logo {
+    box-shadow: none;
+}
+
+#item1 {
+    grid-area: header;
+
+}
+
+#item2 {
+    grid-area: nav;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+#item3 {
+    grid-area: img;
+
+}
+
+#item4 {
+    grid-area: aside;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#item5 {
+    grid-area: main;
+}
+
+#item6 {
+    grid-area: left;
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    gap: 1rem;
+}
+
+#item7 {
+    grid-area: middle;
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    gap: 1rem;
+}
+
+#item8 {
+    grid-area: right;
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    gap: 1rem;
+}
+
+
+section {
+    padding: 20px;
+    display: grid;
+    gap: 1rem;
+}
+
+#sect {
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0px 3px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    opacity: .6;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .2cqb;
+}
+
+main {
+    padding: 0;
+}
+
+
+.dropbtn,
+.dropdown-content {
+    display: none;
+}
+
+h2 {
+    opacity: .3;
+}
+
+p {
+    opacity: .7;
+    letter-spacing: .1cqb;
+    line-height: 2.7cqb;
+}
+
+hr {
+    border-top: none;
+    border-left: #000;
+    border-right: #000;
+}
+
+.aside {
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+}
+
+.aside>h1 {
+    font-size: 36px;
+    color: hsl(35, 77%, 62%);
+}
+
+#btn2 {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    border-radius: 25px;
+    padding: 4px 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+
+    .dropbtn,
+    .dropdown-content {
+        display: inline;
+    }
+
+    nav {
+        display: none;
+    }
+
+    * style the dropdown button */ .dropbtn {
+        background-color: #4caf50;
+        color: #eee;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: grab;
+    }
+
+    /* The container <div>- needed to position the dropdown content. */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+
+    #grid-container {
+        display: grid;
+        grid-template-areas:
+            "header header header nav nav nav"
+            "img img img img img . "
+            ". main main main main ."
+            ". . aside aside . ."
+            ". . left left . ."
+            ". . middle middle . ."
+            ". . right right . .";
+        gap: 2em;
+        padding: 2px;
+    }
+
+}

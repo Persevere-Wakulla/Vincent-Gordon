@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="Vincent M G Delemos">
+  <link rel="stylesheet" href="stylz.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/portfoliofavi.png">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="background-image"></div>
+  <main class="main-container">
+    <header class="header-container">
+      <div class="header-image__div">
+        <img class="header-image animate  midslide animate--infinite " src="./assets/xbox.png" alt="xbox">
+        <img class="header-image__bg animate animate--slow animate--delay-1s animate--infinite btmrslide" src="./assets/bg-pattern-1.png" alt="pattern">
+      </div>
+      <div>
+        <h1 class="animate fadein animate--easein animate--fillmode animation-delay " >I hope you enjoy</h1><br>
+        <p>I decided to go with something fun.
+          Hi My name is Vincent M Gordon Delemos. I'm currently in prison in the persevere program on my way to become a
+          full stack junior developer. I've been using computers from a very young age. Anybody out there remember
+          number crunch on a 3.5 floppy. I'm a huge Fan of video game art. I appreciate the attention to details. My
+          hope is to become the best at what im learning by always remebering. P.S Every button will lead you to another
+          project!!
+        </p>
+      </div>
+      <div class="dropdown animate animate--slow animate--infinite lftslide">
+        <img class="header-image__menu dropbtn" src="./assets/Hamburger Menu.svg" alt="menu">
+        <div class="dropdown-content">
+          <div class="dropdown-menu">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="bottom">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="image-map__container">
+      <h1 class="image-map__h1 animate animate--esaein animate--fillmode fadein animation-delay">There are 3 Links in this Portrait<br>
+        Check out some of my projects!!</h1><br>
+      <map class="image-map" name="imagemap">
+        <area class="credit" shape="poly" coords="91,172,59,118,122,49,183,43,243,153,182,218,133,228,129,231,126,233"
+          href="./My Projects/interactive-card-details-form-main/index.html" target="_blank" alt="Credit card project">
+        <area class="news" shape="poly" coords="201,337,272,251,324,321,338,277,403,322,361,394,285,416,281,415,278,415"
+          href="./My Projects/news-homepage-main/index.html" target="_blank" alt="News project">
+        <area class="spotify" shape="poly"
+          coords="371,503,430,454,406,416,493,378,560,398,567,477,526,525,445,533,447,535"
+          href="./My Projects/pod-request-access-landing-page/starter-code/index.html" target="_blank"
+          alt="Spotify Landing project">
+      </map>
+      <img usemap="#imagemap" class="img" src="./assets/image-equilibrium-border.jpg" alt="equilibrium">
+    </section>
+    <!-- Container for image gallery -->
+    <section class="container image-gallery">
+      <!-- Full-width images with number text -->
+      <div class="grid-container2">
+        <div class="pos">
+          <div class="mySlides">
+            <div class="numtxt">1 / 5</div>
+            <img src="./assets/go-kart-1000cc.png" width="100%" alt="New Graphic Kart">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">2 / 5</div>
+            <img src="./assets/1000cc-go-kart.png" width="100%" alt="New Design">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">3 / 5</div>
+            <img src="./assets/saudi-arabia-sand-rail.png" width="100%" alt="New Template">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">4 / 5</div>
+            <img src="./assets/the isle of man tt.png" width="100%" alt="New Seasonal">
+          </div>
+          <div class="mySlides">
+            <div class="numtxt">5 / 5</div>
+            <img src="./assets/wingsuit.png" width="100%" alt="New Layout">
+          </div>
+          <!-- next and previous buttons -->
+          <div class="f3">
+            <button type="button" class="prev" onclick="plusSlides(-1)">&laquo;</button>
+
+            <button type="button" class="next" onclick="plusSlides(1)">&raquo;</button>
+          </div>
+
+        </div>
+      </div>
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption" class="image-gallery__caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="./assets/go-kart-1000cc.jpg" onclick="currentSlide(1)" width="100%"
+            alt="Gsxr 1000cc Kart">
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/1000cc-go-kart.jpg" onclick="currentSlide(2)" width="100%"
+            alt="New Design 1000cc">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/saudi-arabia-sand-rail.jpg" onclick="currentSlide(3)" width="100%"
+            alt="Sand Rail 1000hp">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/the isle of man tt.jpg" onclick="currentSlide(4)" width="100%"
+            alt="Isle Of Man T.T">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="./assets/wingsuit.jpg" onclick="currentSlide(5)" width="100%"
+            alt="Wing (Squirell) Suit">
+        </div>
+      </div>
+    </section>
+    <footer class="grid-container2">
+      <div class="footer-container pos">
+        <form name="myForm" target="_blank" action="#" required class="item2 form ">
+          <div class="flex-form">
+            <label for="Contact">Contact Me</label>
+            <label for="name">NAME</label><input type="text" id="name" placeholder="e.g. Full Name" class="input-length"
+              required>
+            <label for="email">Email@</label><input type="text" id="email" placeholder="b*******@gmail.com" required
+              class="input-length">
+            <div class="form-grid">
+              <div class="flex-form">
+                <fieldset>
+                  <legend>Newsletter</legend>
+                  <label for="yes">Yes</label>
+                  <input type="radio" name="newsletter" id="yes">
+                  <label for="no">No</label>
+                  <input type="radio" name="newsletter" id="no">
+                </fieldset>
+              </div>
+              <div class="flex-form">
+                <fieldset>
+                  <legend>Phone#</legend>
+                  <label for="phone">Yes</label>
+                  <input type="radio" name="number" id="phone">
+                  <label for="not">No</label>
+                  <input type="radio" name="number" id="not">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <button formaction="./My Projects/blog-preview-card-main/index.html" type="submit">Confirm</button>
+
+        </form>
+      </div>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>

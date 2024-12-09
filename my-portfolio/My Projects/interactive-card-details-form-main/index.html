@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="Vincent M G Delemos">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/portfoliofavi.png">
+  <link rel="stylesheet" href="stylz.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="content-grid ">
+    <div class="card-previews">
+      <div class="card-front">
+        <img class="card-front__bg" src="./images/bg-card-front.png" alt="front">
+        <img class="card-front__logo" src="./images/card-logo.svg" alt="logo">
+        <span class="card-front__number">0000 0000 0000 0000</span>
+        <span class="card-front__name">Jane AppleSeed</span>
+        <span class="card-front__expdate">00/00</span>
+      </div>
+      <div class="card-back">
+        <img class="card-back__bg" src="./images/bg-card-back.png" alt="back">
+        <span class="card-back__ccv">000</span>
+      </div>
+    </div>
+    <div class="form-container">
+      <form name="myForm" target="_blank" action="./validate.html" required class="item2 form">
+        <div class="flex-form">
+          <label for="name"> CARDHOLDER NAME</label><input type="text" id="name" placeholder="e.g. Jane Appleseed"
+            class="input-length" required>
+          <label for="cardnumber">Card Number</label><input type="text" id="cardnumber"
+            placeholder="e.g. 1234 5678 9123 0000" class="input-length" pattern="\d{16,16}">
+          <p id="message" class="message">16 digits please</p>
+          <div class="form-grid">
+            <div class="flex-form">
+              <label for="exp">EXP.DATE</label>
+              <input type="text" id="exp" placeholder="MM" class="input" pattern="\w{2,2}">
+            </div>
+            <div class="flex-form">
+              <label for="year">(MM/YY)</label>
+              <input type="text" id="year" placeholder="YY" class="input" pattern="\d{2,2}">
+            </div>
+            <div class="flex-form"> <label for="ccv">CCV</label>
+              <input type="text" id="ccv" placeholder="e.g. 123" class="ccv-length" pattern="\d{3,3}">
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+</body>
+
+</html>

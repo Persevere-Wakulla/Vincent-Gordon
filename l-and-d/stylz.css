@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+ button{
+    padding: 2px 8px;
+    border-radius: 25px;
+    border: none;
+ }
+ #price {
+    color: red;
+ }
+ img {
+    width: 15%;
+ }
+ #storeFront {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 2rem;
+ margin: 0 auto;
+    font-size: 10px;
+    position: relative;
+}
+#singleCard {
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 2rem
+}
+#description {
+   max-width: 50rem;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+} 
+.landing {
+   min-width: 200px;
+   background-color: rgba(0, 255, 255, 0.185);
+   width: 25%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+border-radius: 10px;
+padding: .5rem;
+box-shadow: 0 2px 15px 1px hsla(64, 50%, 50%, 0.548);
+backdrop-filter: blur(1px) saturate(300%) brightness(50%) hue-rotate(-90deg) ;
+
+}
+h1 {
+   font-size: 36px;
+   color: hsla(41, 100%, 50%, 0.795);
+   padding: 1rem 0;
+   text-shadow:  2px 1px 10px hsla(0, 0%, 6%, 0.979),  2px 1px 0px hsla(64, 89%, 7%, 0.651);
+}
+
+.landingHeader{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.landing button {
+   padding: 2px 8px;
+   cursor: pointer;
+   background-color: rgba(136, 136, 224, 0.575);
+color: antiquewhite;
+transition: all .2s;
+box-shadow: 0px 1px 1px 1px hsla(175, 55%, 59%, 0.925);
+}
+
+button:hover {
+   scale: 1.1;
+   color: rgb(17, 3, 139);
+   background-color: rgba(184, 231, 109, 0.384);
+   font-weight: bolder;
+   font-family: "ink free";
+   box-shadow: 0px 2px 10px 2px hsla(41, 100%, 50%, 0.795);
+}
+
+button:active {
+   scale: .9;
+box-shadow:  0px 0px 20px 2px hsla(175, 55%, 59%, 0.925),0px 1px 1px 2px hsla(41, 100%, 50%, 0.795) ;
+}
+.storeLogo img {
+width: 8%;
+border-top-right-radius: 50%;
+border-top-left-radius:2px ;
+border-bottom-right-radius:2px ;
+border-bottom-left-radius:50% ;
+opacity: .8;
+}
+.storeLogo2 img {
+width: 24%;
+border-top-right-radius: 50%;
+border-top-left-radius:2px ;
+border-bottom-right-radius:2px ;
+border-bottom-left-radius:50% ;
+
+}
+.storeLogo3 img {
+width: 8%;
+border-top-right-radius: 50%;
+border-top-left-radius:2px ;
+border-bottom-right-radius:2px ;
+border-bottom-left-radius:50% ;
+
+}
+
+.storeLogo {
+   position: absolute;
+top: .5rem;
+left: .5rem;
+width: 100%;
+min-width: 100px;
+}
+.storeLogo2 {
+   position: absolute;
+top: .5rem;
+left: .5rem;
+width: 100%;
+min-width: 100px;
+}
+.storeLogo3 {
+   position: absolute;
+top: .5rem;
+left: .5rem;
+width: 100%;
+min-width: 100px;
+}
+
+.storeLogo>*:nth-child(n){
+   position: absolute;
+}
+.storeLogo2>*:nth-child(n){
+   position: absolute;
+}
+.storeLogo3>*:nth-child(n){
+   position: absolute;
+}
+
+.firstLetter{
+font-family: ink free;
+font-size: 36px;
+color: white;
+top: -.5rem;
+left: .5rem;
+}
+.middleLetter{
+font-family: ink free;
+font-size: 30px;
+color: white;
+top: .9rem;
+left: 1.5rem;
+animation: spin 10s cubic-bezier(.021, 2.3, .01, .03) infinite alternate backwards;
+}
+.lastLetter{
+font-family: ink free;
+font-size: 36px;
+color: white;
+top: 2rem;
+left: 2.5rem;
+}
+@keyframes spin {
+   from {
+transform: rotate3d(0,1,1, 720deg);
+color: rgb(241, 120, 120);
+   }
+   to {
+transform: rotate3d(0,1,1, -720deg);
+color: #03f855;
+   }
+   
+}
+.landingBtnContainer {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 2rem;
+}
+#storeLanding {
+   background-image: url(./images/boardwalk-by-the-ocean.jpg);
+   background-repeat: no-repeat;
+   height: 100vh;
+   background-size: cover;
+}
+   
+#signUpPage {
+   background-image: url(./images/temple-gateway-by-mountain.jpg);
+   background-repeat: no-repeat;
+   height: 100vh;
+   background-size: cover;
+}
+#signInPage {
+   background-image: url(./images/a-fire-by-the-lake.jpg);
+   background-repeat: no-repeat;
+   height: 100vh;
+   background-position: top ;
+   background-size: cover;
+ }
+ 
+ #main {
+   background-image: url(./images/TAL-universal-orlando-halloween-horror-nights-entry-UNIVERSALHHN0923-20cd6ffe860c4f9f93eb769c0084b8ad.jpg);
+   background-repeat: no-repeat;
+   height: 100vh;
+   background-position: top ;
+   background-size: cover;
+ }
+
+fieldset {
+   display: flex;
+   font-size: 10px;
+   width: 80%;
+   margin: 0 auto;
+   border-radius: 5px;
+   padding: .2rem;
+   border: 1px solid hsla(49, 87%, 45%, 0.932);
+
+}
+fieldset a {
+   position: relative;
+   left: -1.2rem;
+}
+input,
+label {
+vertical-align: middle;
+}
+
+
+.landingGrid {
+  
+}
+.landingImage {
+width: 80%;
+border-radius: 10px;
+box-shadow: 0px 1px 2px 2px hsla(175, 55%, 59%, 0.925);
+
+}
+
+.loginImage {
+   width: 200%;
+
+}
+.none{
+   display: none;
+}
+.block {
+   display: block;
+}
+/* ***** STYLE CHECK AND RADIO BTNS ****** */
+
+/* Customize the label (the container) */
+.check-container {
+   display: block;
+   position: relative;
+   padding-left: 35px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ }
+ 
+ /* Hide the browser's default checkbox */
+ .check-container input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+ }
+ 
+ /* Create a custom checkbox */
+ .checkbox,
+ .radio {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 12px;
+   height: 12px;
+   background-color: #eee;
+   transition: all .5s;
+
+ }
+ .radio {
+   border-radius: 50%
+ }
+ 
+ /* On mouse-over, add a grey background color */
+ .check-container:hover input ~ .checkbox {
+   background-color: #a76714;
+   scale: 1.1;
+ }
+
+ 
+ /* When the checkbox is checked, add a blue background */
+ .check-container input:checked ~ .checkbox {
+   background-color: #1e586894;
+ }
+ 
+ /* Create the checkmark/indicator (hidden when not checked) */
+ .checkbox:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
+ 
+ /* Show the checkmark when checked */
+ .check-container input:checked ~ .checkbox:after {
+   display: block;
+ }
+ 
+ /* Style the checkmark/indicator */
+ .check-container .checkbox:after {
+   left: 3px;
+   top: 1px;
+   width: 2px;
+   height: 5px;
+   border: solid #03f855;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+   
+ }
+ .signUpContainer {
+   max-width: 1200px;
+   min-width: 200px;
+   color: antiquewhite;
+   background-color: rgba(0, 255, 255, 0.185);
+   width: 35%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+border-radius: 10px;
+padding: .5rem;
+box-shadow: 0 2px 15px 1px hsla(64, 50%, 50%, 0.548);
+backdrop-filter: blur(1px) saturate(300%) brightness(50%) hue-rotate(-90deg) ;
+ }
+ .signUpContainer h1 {
+   position: relative;
+   right: -5rem;
+ }
+ input[type=text], input[type=password] {
+   width: 100%;
+   padding: 10px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #adec895e;
+   color: #69045c;
+   font-family: segoe print;
+   font-size: 18px;
+
+ }
+ input:focus {
+   outline: 1px solid aqua;
+   border-radius: 2px;
+   color: antiquewhite;
+ }
+ input::placeholder {
+   font-family: ink free;
+   color: antiquewhite;
+ }
+ 
+ .rememberMe {
+   padding: 0 5rem;
+ }
+ .rememberMe span {
+   top: 8px;
+   left: 4rem;
+ }
+ .signUpContainer button {
+   padding: 2px 8px;
+   cursor: pointer;
+   background-color: rgba(136, 136, 224, 0.575);
+color: antiquewhite;
+transition: all .5s;
+box-shadow: 0px 1px 1px 1px hsla(175, 55%, 59%, 0.925);
+ }
+ .formBtns {
+   display: flex;
+   justify-content: space-evenly;
+}
+ 
+   
+ .signUpContainer fieldset p {
+   font-size: 7px;
+ }
+ .signUpContainer fieldset label {
+   padding: 0 .5rem;
+   top: -.2rem;
+ }
+ #profilePic {
+   border-radius: 50%;
+ }
+ .profileContainer {
+   display: flex;
+   margin: 1rem;
+   max-width: 1200px;
+   min-width: 200px;
+   color: antiquewhite;
+   background-color: rgba(0, 255, 255, 0.185);
+   width: 35%;
+   position: relative;
+   top: 8rem;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+border-radius: 10px;
+padding:  .5rem 1rem;
+box-shadow: 0 2px 15px 1px hsla(64, 50%, 50%, 0.548);
+backdrop-filter: blur(1px) saturate(300%) brightness(50%) hue-rotate(-90deg) ;
+ }
+ .nameContainer {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   gap: .3rem;
+}
+
+#firstName {
+   padding-right: .1rem;
+}
+
+button {
+   padding: 2px 8px;
+   cursor: pointer;
+   background-color: rgba(136, 136, 224, 0.575);
+color: antiquewhite;
+transition: all .2s;
+box-shadow: 0px 1px 1px 1px hsla(175, 55%, 59%, 0.925);
+}
+
+.icon{
+   background: linear-gradient(to right, rgb(136,136,224),rgb(243, 170, 227));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   scale: 2;
+}
+
+#search{
+   width: 30%;
+   padding: 1px;
+   margin: 0;
+}
+.mainHeader{
+   position: relative;
+   display: flex;
+justify-content: end;
+align-items: center;
+padding: 1.5rem 2rem;
+gap: 3.5rem;
+background: hsla(310, 98%, 50%, 0.377);
+backdrop-filter: blur(2px) brightness(150%) contrast(300%);
+}
+.headerBtns {
+   display: flex;
+   gap: 2rem;
+}
+.hiddenMenu {
+   display: flex;
+   justify-content: center;
+   gap: 5rem;
+   padding-top: 1rem;
+   display: none;
+}
+#user {
+   background: rgba(245, 154, 207, 0.5);
+}
+#user img {
+ width: 30%;
+}
+#user h1 {
+   font-size: 20px;
+
+}
+#user p {
+   color: white;
+}
+.basketDiv {
+   position: relative;
+   z-index: 0;
+}
+
+.quantity {
+   font-size: 18px;
+   width: 100%;
+
+   border-radius: 50%;
+   position: absolute;
+   top: -.5rem;
+   left: .3rem;
+   z-index: 1;
+   background: #eeeeee63;
+   color: rgb(2, 200, 250) ;
+   backdrop-filter: brightness(1000%);
+}
+
+@media (min-width: 1000px) {
+   
+   .landing{
+      width: 12%;
+   }
+   .signUpContainer{ 
+    width: 25%;
+   }
+   .rememberMe {
+      left: 5.5rem;
+   }
+   .storeLogo img {
+width: 4%;
+   }
+   .storeLogo2 img {
+width: 15%;
+   }
+   .storeLogo3 img {
+width: 5.7%;
+   }
+   #signInPage {
+      background-position: top -20rem center;
+   }
+   .profileContainer {
+      width: 17%;
+   }
+   .mainHeader,
+   #user {
+      width: 66%;
+      margin: 0 auto;
+      max-width: 1200px;
+   }
+  #search {
+   position: relative;
+   left: -5.5rem ;
+   width: 35%;
+  }
+  .headerBtns {
+   gap: 5rem;
+  }
+
+}

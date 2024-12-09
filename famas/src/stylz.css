@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* % Colors */
+	--white: hsl(0, 0%, 100%);
+	--night: hsl(240, 67%, 8%);
+	--drk-gray: hsl(240, 17%, 26%);
+	--gray: hsl(240, 6%, 54%);
+	--blush-gray: hsl(194, 48%, 49%);
+	--yellow: hsl(33, 82%, 61%);
+	--purple: hsl(263, 67%, 51%);
+	--brnt-arnge: hsl(10, 63%, 51%);
+	--rd-arnge: hsl(2, 68%, 53%);
+	--arnge: hsl(17, 73%, 46%);
+	--turquoise: hsl(169, 73%, 44%);
+	--blue: hsl(222, 87%, 56%);
+}
+body {
+	background-image: url("../planets-fact-site/starter-code/assets/background-stars.svg");
+	background-repeat: none;
+	background-size: cover;
+	background-color: var(--night);
+	color: var(--white);
+}
+
+header nav {
+	display: flex;
+	gap: 16px;
+	justify-content: end;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid gray;
+}
+
+header nav h1 {
+	margin-right: auto;
+}
+
+header nav a {
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+	color: var(--white);
+}
+
+header nav a.active {
+	border-left: 3px solid var(--white);
+	border-bottom: 3px solid var(--white);
+}
+
+.statistics-container {
+	display: flex;
+	gap: 2rem;
+	margin-top: 2rem;
+	margin-left: 8rem;
+}
+
+.statistics-container span {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	border: solid 1px var(--white);
+}
+
+.statistics-container span p {
+	font-size: 10px;
+}
+
+img {
+	width: 50%;
+	padding: 2rem;
+	margin-left: 4rem;
+}
+
+.planet-container {
+	display: flex;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 3rem;
+}
+
+.planet-container p {
+	width: 50%;
+}
+
+.button-container {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	position: relative;
+	left: 30rem;
+	width: 25%;
+}
+
+.button-container button {
+	padding: 5px 10px;
+	background-color: transparent;
+	border: none;
+	outline: 1px solid white;
+	color: var(--white);
+}
+.button-container button:hover {
+	background-color: var(--drk-gray);
+}
+.data-container {
+	margin-right: auto;
+}
+
+.surface-container {
+	position: relative;
+	margin: 0;
+}
+
+.surface-container .surface-planet {
+	width: 100%;
+	position: relative;
+	top: 5rem;
+}
+
+.surface-container .surface-geology {
+	position: relative;
+	top: -3rem;
+	left: -2rem;
+	rotate: 45deg;
+}
+
+.surface-data-container {
+	position: relative;
+	top: 5rem;
+	left: 5rem;
+}
+
+
+.merc {
+	background-color: #419ebb;
+}
+
+.venu {
+	background-color: #eda249;
+}
+
+.eart {
+	background-color: #6f2ed6;
+}
+
+.mars {
+	background-color: #d14c32;
+}
+
+.jupi {
+	background-color: #d83a34;
+}
+
+.satu {
+	background-color: #cd5120;
+}
+
+.uran {
+	background-color: #1ec2a4;
+}
+
+.nept {
+	background-color: #2d68f0;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vincent M G Delemos">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="stylz.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/portfoliofavi.png">
+    <title>L &amp; D</title>
+</head>
+
+<body>
+    <main>
+        <section id="storeLanding" class="non">
+            <div class="storeLogo">
+                <img src="./images/portfoliofavi.png" alt="logo">
+                <span class="firstLetter">L</span>
+                <span class="middleLetter">&amp;</span>
+                <span class="lastLetter">D</span>
+            </div>
+            <div class="landingGrid">
+                <div class="landing">
+                    <div class="landingHeader">
+                        <img class="landingImage" src="./images/fiji islands.jpg" alt="fiji">
+                        <h1>L &amp; D</h1>
+                    </div>
+                    <div class="landingBtnContainer">
+                        <button id="signUpBtn" type="button">sign up</button>
+                        <button id="signInBtn" type="button">sign in</button>
+                    </div>
+                    <fieldset>
+                        <legend>Please agree to terms</legend>
+                        <label class="check-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkbox"></span>
+                        </label>
+                        <a id="termsOfAgree">Terms of Agreement </a>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <section id="signUpPage" class="none">
+            <article>
+                <form id="signUpForm">
+                    <div class="signUpContainer">
+                        <div class="storeLogo2">
+                            <img src="./images/portfoliofavi.png" alt="logo">
+                            <span class="firstLetter">L</span>
+                            <span class="middleLetter">&amp;</span>
+                            <span class="lastLetter">D</span>
+                        </div>
+                        <h1>Sign Up</h1>
+                        <p>please fill in this form to create an account</p>
+                        <hr>
+                        <label for="fname">first name</label>
+                        <input type="text" placeholder="first name..." name="fname">
+                        <label for="lname">last name</label>
+                        <input type="text" placeholder="last name..." name="lname">
+                        <label for="email">email</label>
+                        <input type="text" placeholder="email..." name="email">
+                        <label for="password">password</label>
+                        <input type="password" placeholder="password..." name="password">
+                        <label for="psw-repeat">confirm password</label>
+                        <input type="password" placeholder="repeat password..." name="psw-repeat">
+                        <fieldset>
+                            <legend>Please agree to terms</legend>
+                            <label class="check-container">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                            </label>
+                            <p>by creating an account ypu agree to our. <a id="termsOfPrivacy">Terms &amp; Privacy</a>
+                            </p>
+                        </fieldset>
+                        <label class="check-container rememberMe">
+                            <input type="checkbox" checked name="remember">
+                            remember me
+                            <span class="checkbox"> </span>
+                        </label>
+                        <div class="formBtns">
+                            <button type="submit" class="formCancelBtn">cancel</button><button type="button"
+                                class="formSignUpBtn">sign up</button>
+                        </div>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <section id="signInPage" class="none">
+            <div class="accountPageContainer">
+                <div class="non">
+                    <div class="storeLogo">
+                        <img src="./images/portfoliofavi.png" alt="logo">
+                        <span class="firstLetter">L</span>
+                        <span class="middleLetter">&amp;</span>
+                        <span class="lastLetter">D</span>
+                    </div>
+                </div>
+                <div class="myAccount">
+                </div>
+            </div>
+
+        </section>
+        <section id="main" class="none">
+            <header class="mainHeader">
+                <div class="storeLogo3">
+                    <img src="./images/portfoliofavi.png" alt="logo">
+                    <span class="firstLetter">L</span>
+                    <span class="middleLetter">&amp;</span>
+                    <span class="lastLetter">D</span>
+                </div>
+                <input type="text" id="search" placeholder="🔍search...">
+                <div class="headerBtns">
+                    <button type="button" id="categories">categories</button>
+                    <button type="button" id="products">products</button>
+                    <button type="button" id="myProfile">my account
+                    </button>
+
+                    <button type="button" class="logOut">LogOut</button>
+                    <div class="basketDiv">
+                           <i class="fas icon fa-shopping-cart" id="shoppingCart"></i><span class="quantity"></span>
+                    </div>
+                 
+                </div>
+            </header>
+            <nav class="hiddenMenu">
+                <button type="button" id="electronics">electronics</button>
+                <button type="button" id="jewelery">jewelery</button>
+                <button type="button" id="mensClothing">men's clothing</button>
+                <button type="button" id="womensClothing">women's clothing</button>
+            </nav>
+            <section id="storeFront">
+            </section>
+            <section id="user" class="none"></section>
+        </section>
+            </main>
+            <script type="module" src="./landD.js"></script>
+        </body>
+        
+        </html>

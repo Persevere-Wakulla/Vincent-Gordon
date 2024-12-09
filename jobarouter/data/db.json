@@ -1,0 +1,70 @@
+{
+    "careers":[
+        {
+            "id": 1 ,
+            "title": "Water Treatment" ,
+            "salary": "80,000.00 anually",
+            "location": "Tampa Fl" 
+        },
+        {
+            "id": 2,
+            "title":"UnderWater Welder" ,
+            "salary": "100,000.00 anually",
+            "location": "Miami Fl" 
+        },
+        {
+            "id": 3,
+            "title": "OffShore Drilling",
+            "salary": "90,000.00 anually",
+            "location": "Baton Rouge Ls" 
+        },
+        {
+            "id": 4,
+            "title": "Truck Driver" ,
+            "salary": "80,000.00 anually",
+            "location": "Apply Online"
+        },
+        {
+            "id": 5,
+            "title": "Program Manager",
+            "salary": "75,000.00 anually",
+            "location": "Atlanta Ga"
+        },
+        {
+            "id": 6,
+            "title": "Aws/Python Developer",
+            "salary": "154,000.00 anually",
+            "location": "Plano Tx"
+        },
+        {
+            "id": 7,
+            "title": "TrustFund Manager",
+            "salary": "400,000.00 anually",
+            "location": "Virginia" 
+        },
+        {
+            "id": 8,
+            "title": "Machine Learning Engineer",
+            "salary": "200,000.00 anually",
+            "location": "Seattle Wa" 
+        },
+        {
+            "id": 9,
+            "title": "DevOps Engineer III",
+            "salary": "120,000.00 anually",
+            "location":"New York" 
+        },
+        {
+            "id": 10,
+            "title": "Vp of Sales",
+            "salary": "250,000.00 anually",
+            "location": "Jacksonville Fl" 
+        },
+        {
+            "id": 11,
+            "title": "Staff Senior Engineer",
+            "salary": "325,000.00 anually",
+            "location": "Silicon Valley" 
+        }
+    ]
+}

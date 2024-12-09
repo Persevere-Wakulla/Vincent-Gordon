@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Vincent M G Delemos">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/portfoliofavi.png">
+  <link rel="stylesheet" href="stylz.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+
+</head>
+
+<body>
+  <main class="main-container" id="main1" >
+    <header class="header-container"><img src="./images/logo-bonus.svg" alt="R,P,S,L,S-Game title">
+      <div class="score">SCORE<span id="score" class="number-score"></span></div>
+    </header>
+    <section id="section" class="section-container">
+      <div class="game-board__card" id="gameboardcard" >
+        <img class="pentagon-image" src="./images/bg-pentagon.svg" alt="pentagon">
+        <span class="lizard-image" id="lizard"><img src="./images/icon-lizard.svg" alt="lizard"></span>
+        <span class="paper-image" id="paper"><img src="./images/icon-paper.svg" alt="paper"></span>
+        <span class="rock-image" id="rock"><img src="./images/icon-rock.svg" alt="rock"></span>
+        <span class="scissors-image" id="scissors"><img src="./images/icon-scissors.svg" alt="scissors"></span>
+        <span class="spock-image" id="spock"><img src="./images/icon-spock.svg" alt="spock"></span>
+      </div>
+      <section id="win" class="win-loose">
+        <div class="game-board__2"> <img class="user-image" id="userWin" src=" " alt="paper"> <img class="comp-image"
+            id="compWin" src=" " alt="rock"> </div>
+        <p id="change-text" class="outcome"></p>
+      </section>
+    </section>
+    <footer>
+      <div id="rules" on> <img id="close" onclick="hideMenu()" src="./images/icon-close.svg" alt="close"><img
+          src="./images/image-rules-bonus.svg" alt="rules">
+      </div>
+      <div class="button">
+
+        <button type="button" class="btn1" id="play-again" onclick="showRules()">Rules</button><button type="button"  class="btn1" id="menu" > Main Menu</button>
+        <button type="button" class="btn2" id="playmore">Play</button>
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Vincent M G Delemos</a>.
+      </div>
+    </footer>
+  </main>
+  <section class="main-container2" id="main2">
+    <header class="header-container"><img src="./images/logo.svg" alt="R,P,S-Game title">
+      <div class="score">SCORE<span id="score2" class="number-score"></span></div>
+    </header>
+    <section id="section2" class="section-container">
+      <div class="game-board__card2" id="gameboardcard2" >
+        <img class="triangle-image" src="./images/bg-triangle.svg" alt="triangle">
+        <span class="paper-image2" id="paper2"><img src="./images/icon-paper.svg" alt="paper"></span>
+        <span class="rock-image2" id="rock2"><img src="./images/icon-rock.svg" alt="rock"></span>
+        <span class="scissors-image2" id="scissors2"><img src="./images/icon-scissors.svg" alt="scissors"></span>
+      </div>
+      <section id="win2" class="win-loose">
+        <div class="game-board__2"> <img class="user-image" id="userWin2" src=" " alt="paper"> <img class="comp-image"
+          id="compWin2" src=" " alt="rock"> </div>
+          <p id="change-text2" class="outcome"></p>
+        </section>
+      </section>
+      <div class="button">
+        <div id="rules2" on> <img id="close2" onclick="hideMenu2()" src="./images/icon-close.svg" alt="close"><img
+          src="./images/image-rules.svg" alt="rules">
+      </div>
+        <button type="button" class="btn1" id="play-again2" onclick="showRules2()">Rules</button><button type="button" id="menu2" class="btn1" >Main Menu</button>
+        <button type="button" class="btn2" id="playmore2">Play</button>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Vincent M G Delemos</a>.
+      </div>
+    </section>
+    <section class="section3" id="section3">
+      <h1>Welcome!
+        Please choose your challenge </h1>
+        <div class="cover" >
+          <img class="bonus" id="bonus" src="./design/bonus/desktop-step-1-bonus.jpg" alt="bonus" width="60%"  ><img class="original" id="original" src="./design/original/desktop-step-1.jpg" alt="original" width="60%" >
+        </div>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Vincent M G Delemos</a>.
+        </div>
+
+      </section>
+      <script src="./rpsGame.js"></script>
+    </body>
+
+
+        </html>

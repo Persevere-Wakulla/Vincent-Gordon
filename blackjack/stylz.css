@@ -1,0 +1,781 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-transform: capitalize;
+
+}
+
+:root {
+    --Shadow: 0 2px 7px 1px hsla(213, 83%, 33%, .6);
+    --Green: green;
+    --NewDegree: 20deg;
+    --Red: red;
+    --Hero-Image: url(./Blackjack_files/H2P_blackJack.jpg);
+    --Sun: url(./images/icon-sun.svg);
+    --Filter: hue-rotate(-50deg);
+    --Main: hsla(143, 71%, 84%, 0.685);
+    --Black: var(--Test-1);
+}
+
+.darkMode {
+    --Main: hsl(155, 59%, 23%);
+    --Filter: drop-shadow(16px 16px 20px red) invert(75%);
+    --Sun: url(./images/icon-moon.svg);
+    --Black: var(--Test-5);
+}
+
+body {
+    background-color: var(--Main);
+    filter: var(--Filter);
+}
+
+header {
+    background-image: var(--Sun);
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right 2rem top;
+}
+
+.red {
+    background-color: crimson !important;
+}
+
+.cards {
+    width: 20px;
+    position: absolute;
+}
+
+.dealer {
+    position: relative;
+    z-index: 0;
+}
+
+.dealer-image {
+    width: 35%;
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+button {
+    font-family: ink free;
+}
+
+#heroImage {
+    /* display: none ; */
+    background-image: linear-gradient(rgba(195, 247, 8, 0.267), rgba(10, 241, 60, 0.5)), var(--Hero-Image);
+    height: 100vh;
+    filter: var(--Filter);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#heroImage button {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 2px 8px;
+    color: aliceblue;
+    font-family: ink free;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 25px;
+    cursor: pointer;
+
+    background-image: linear-gradient(to right, var(--Test-1), var(--Test-2), var(--Test-3), var(--Test-4), var(--Test-5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* * experimental properties */
+@property --Test-1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(0, 87%, 76%);
+}
+
+@property --Test-2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(61, 79%, 68%);
+}
+
+@property --Test-3 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(128, 85%, 69%);
+}
+
+@property --Test-4 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(192, 83%, 48%);
+}
+
+@property --Test-5 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(293, 75%, 62%);
+}
+
+@property --Deg90 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 90deg;
+}
+
+@property --Deg20 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 20deg;
+}
+
+@property --Deg15 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 15deg;
+}
+
+@property --Deg45 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 45deg;
+}
+
+@property --Deg60 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 60deg;
+}
+
+@property --Deg180 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 180deg;
+}
+
+@property --Perc20 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 20%;
+}
+
+@property --Perc40 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 40%;
+}
+
+@property --Perc60 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 60%;
+}
+
+@property --Perc80 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --Perc100 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%;
+}
+
+#menu {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+    padding: 2px 8px;
+    border-radius: 25px;
+    color: var(--Black);
+    font-family: ink free;
+    font-weight: bold;
+    font-size: larger;
+    background-image: linear-gradient(to right, var(--Test-1), var(--Test-2), var(--Test-3), var(--Test-4), var(--Test-5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#menu:hover {}
+
+.glow:hover {
+    color: #fdfbfb;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #faecec, 0 0 20px #82f777, 0 0 30px #63fa78, 0 0 40px #7eff89, 0 0 50px #89f87f, 0 0 60px #8ffd9e, 0 0 70px #02f802;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fa7cbb, 0 0 40px #f066a6, 0 0 50px #fc7dbc, 0 0 60px #fc66db, 0 0 70px #fc72b7, 0 0 80px #f787bf;
+    }
+}
+
+h1 {
+    text-align: center;
+    background-image: linear-gradient(red, rgb(136, 108, 48), green);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+}
+
+.show-container {
+    display: inline !important;
+}
+
+.hide-container {
+    display: none !important;
+}
+
+.gameboard>*:not(.dealer) {
+    position: absolute;
+    width: min-content;
+    border: solid 1px yellow;
+    background-color: hsla(143, 92%, 67%, 0.685);
+}
+
+.gameboard>*:not(.dealer):hover {
+    background-color: magenta !important;
+    animation: 3s ease-in 1s infinite alternate backwards step-start;
+    scale: 1.2;
+
+}
+
+.section-control {
+    width: 66%;
+    display: none;
+
+}
+
+.gameboard {
+    position: relative;
+    background-image: url(./MB-Black-Jack-Table-Layout.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 4rem;
+    width: 575px;
+    height: 350px;
+    border: 6px solid rgba(165, 42, 42, 0.753);
+    border-radius: 9rem;
+    background-color: rgb(57, 122, 27);
+    box-shadow: var(--Shadow), inset 3px -3px 0px hsl(160, 90%, 71%), inset 3px 3px 0px hsl(160, 90%, 71%), inset -3px 3px 0px hsl(160, 90%, 71%), inset -3px -3px 0px hsl(160, 90%, 71%);
+    color: #faecec;
+    font-size: 18px;
+}
+
+#deck {
+    box-shadow: var(--Shadow);
+}
+
+img {
+    width: 100%;
+}
+
+.box {
+    width: 1px;
+    height: 1px;
+    padding: 1rem .5rem;
+    margin: 0 50px;
+    display: inline-block;
+    border: solid 2px black;
+}
+
+.box1 {
+    bottom: 8.5rem;
+    transform: rotate(44deg);
+    left: 2rem;
+}
+
+.box1:hover {}
+
+.box2 {
+    bottom: 6rem;
+    left: 5.3rem;
+    transform: rotate(29deg);
+
+}
+
+.box3 {
+    bottom: 4.4rem;
+    left: 9.2rem;
+    transform: rotate(14deg);
+}
+
+.box4 {
+    bottom: 3.75rem;
+    left: 13.5rem;
+
+}
+
+.box5 {
+    bottom: 4.4rem;
+    right: 9.6rem;
+    transform: rotate(-15deg);
+}
+
+.box6 {
+    bottom: 6rem;
+    right: 5.7rem;
+    transform: rotate(-30deg);
+}
+
+.box7 {
+    bottom: 8.5rem;
+    right: 2.4rem;
+    transform: rotate(-44deg);
+}
+
+#dealersScore {
+    color: red;
+    position: absolute;
+    left: 17rem;
+    top: 5rem;
+    width: 20px;
+    height: 20px;
+    background-color: var(--Test-2);
+    z-index: 1;
+}
+
+#dealerFirstCard {
+    position: absolute;
+    top: .6rem;
+    left: 13.8rem;
+    z-index: 1;
+    width: 1px;
+    height: 1px;
+    padding: 1rem .5rem;
+    margin: 0 50px;
+    display: inline-block;
+    border: solid 2px rgb(13, 179, 26);
+}
+
+#dealerSecondCard {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 2rem;
+    left: 12rem;
+    z-index: 1;
+    padding: 1rem .5rem;
+    margin: 0 50px;
+    display: inline-block;
+    border: solid 2px rgb(59, 12, 228);
+}
+
+#dealerThirdCard {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 2rem;
+    left: 15.5rem;
+    z-index: 1;
+    padding: 1rem .5rem;
+    margin: 0 50px;
+    display: inline-block;
+    border: solid 2px rgb(170, 15, 162);
+}
+
+p {
+    text-align: center;
+    font-family: segoe print;
+    font-size: larger;
+    background-image: linear-gradient(var(--Deg90), var(--Test-1), var(--Test-5));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#playersPurse {
+    position: absolute;
+    left: 1.2rem;
+    top: 1rem;
+}
+
+.test2 {
+    background: repeating-conic-gradient(from 45deg at var(--Perc20) var(--Perc80), hsl(213, 50%, 50%) var(--Deg15) var(--Deg20), hsl(100, 50%, 50%) var(--Deg20) var(--Deg45), hsl(61, 50%, 50%) var(--Deg45) var(--Deg60), hsl(300, 50%, 50%) var(--Deg60) var(--Deg90));
+    border-radius: 25px;
+    padding: 2px 8px;
+    transition: --Perc20 2s, Perc80 2s, --Deg15 2s, --Deg20 2s, --Deg45 2s, --Deg60 2s, --Deg90 2s, border-radius 2s, font-weight 2s;
+}
+
+.test2:hover {
+    cursor: pointer;
+    --Deg15: 720deg;
+    --Deg20: 730deg;
+    --Deg45: 745deg;
+    --Deg60: 760deg;
+    --Deg90: 780deg;
+    --Perc20: 95%;
+    --Perc80: 5%;
+    scale: 1.1;
+
+}
+
+/* * Third section where all cards populate */
+.action-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.play-area {
+    position: relative;
+    height: 50vh;
+    grid-column: 3;
+}
+
+
+.play-area>*:not(.test2) {
+    width: 350px;
+    height: 250px;
+    background-repeat: no-repeat;
+    position: absolute;
+    border: 6px solid rgba(165, 42, 42, 0.753);
+    border-radius: 9rem;
+    background-color: rgb(159, 186, 197);
+    margin: 0 auto;
+    color: #faecec;
+    perspective: 1000px;
+    box-shadow: var(--Shadow), inset 3px -3px 0px hsl(160, 90%, 71%), inset 3px 3px 0px hsl(160, 90%, 71%), inset -3px 3px 0px hsl(160, 90%, 71%), inset -3px -3px 0px hsl(160, 90%, 71%);
+}
+
+.player-one-hand {
+    background-position: left -5rem center;
+    right: 16rem;
+}
+
+.player-one-hand:nth-child(1) {
+    width: 100px;
+    padding: .5rem;
+}
+
+.player-id {
+    transform: translateY(39px);
+    font-weight: bold;
+}
+
+.player-bet {
+    font-size: 10px;
+    transform: translateY(-79px);
+}
+
+.bicycle-image {
+    transform: translateY(-10px);
+}
+
+.ornament {
+    transform: rotate(45deg) translateX(15px) translateY(15px);
+}
+
+.betting {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transform: translateX(0px) translateY(-12px);
+}
+
+.bet,
+.split {
+    padding: 1px 3px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: radial-gradient(circle at 100%, var(--Test-1), var(--Test-2) 25%, var(--Test-3) 75%, var(--Test-5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: inset 1px transparent;
+    cursor: pointer;
+}
+
+.bet:hover,
+.split:hover {
+    scale: 1.2;
+
+}
+
+.plus {
+    background: repeating-conic-gradient(from 45deg at var(--Perc20) var(--Perc80), hsl(182, 94%, 50%) var(--Deg15) var(--Deg20), hsl(234, 100%, 50%) var(--Deg20) var(--Deg45), hsl(180, 97%, 49%) var(--Deg45) var(--Deg60), hsl(219, 98%, 50%) var(--Deg60) var(--Deg90));
+    border-radius: 25px;
+    /* padding: 2px 8px; */
+    transition: --Perc20 2s, Perc80 2s, --Deg15 2s, --Deg20 2s, --Deg45 2s, --Deg60 2s, --Deg90 2s, border-radius 2s, font-weight 2s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+
+.minus {
+    background: repeating-conic-gradient(from 45deg at var(--Perc20) var(--Perc80), hsl(150, 94%, 50%) var(--Deg15) var(--Deg20), hsl(0, 100%, 50%) var(--Deg20) var(--Deg45), hsl(130, 97%, 49%) var(--Deg45) var(--Deg60), hsl(0, 98%, 50%) var(--Deg60) var(--Deg90));
+    border-radius: 25px;
+    /* padding: 2px 8px; */
+    transition: --Perc20 2s, Perc80 2s, --Deg15 2s, --Deg20 2s, --Deg45 2s, --Deg60 2s, --Deg90 2s, border-radius 2s, font-weight 2s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+
+.plus:hover,
+.minus:hover {
+    cursor: pointer;
+    --Deg15: 720deg;
+    --Deg20: 730deg;
+    --Deg45: 745deg;
+    --Deg60: 760deg;
+    --Deg90: 780deg;
+    --Perc20: 95%;
+    --Perc80: 5%;
+    scale: 1.3;
+}
+
+.plus:active,
+.minus:active {
+    scale: .9;
+}
+
+.hit {
+    background: repeating-linear-gradient(var(--Deg15), var(--Test-1)20%, var(--Test-5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.hit:hover {
+    scale: 1.2;
+}
+
+.hit:active {
+    scale: .9;
+}
+
+.stay {
+    background: repeating-linear-gradient(var(--Deg15), var(--Test-4)20%, var(--Test-1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stay:hover {
+    scale: 1.2;
+}
+
+.stay:active {
+    scale: .9;
+}
+
+/** Face Down Container- set width and height as needed */
+.face-down {
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+    background-color: transparent;
+    width: 18px;
+    height: 20px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px;
+    border-radius: 2px;
+    /*  this is for the 3d effect*/
+    z-index: 1;
+}
+
+/* * This container is needed to position the front and back side */
+.face-down-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/** Do an Horizontal flip when you move over the  face down container */
+.face-down:hover .face-down-inner {
+    transform: rotateY(180deg);
+    scale: 2;
+}
+
+/* *Position the front and back side */
+.card-front-side,
+.card-back-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari; */
+    backface-visibility: hidden;
+}
+
+/** style the front side (fallback if image is missing) */
+.card-front-side {
+    background-color: #bbb;
+    color: black;
+}
+
+/** Style the back side */
+.card-back-side {
+    background-color: dodgerblue;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+/** Face Down Container- set width and height as needed */
+.face-down2 {
+    background-color: transparent;
+    width: 100px;
+    height: 82px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border-radius: 2px;
+    /*  this is for the 3d effect*/
+}
+
+/* * This container is needed to position the front and back side */
+.face-down-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/** Do an Horizontal flip when you move over the  face down container */
+.face-down2:hover .face-down-inner2 {
+    transform: rotateY(180deg);
+}
+
+/* *Position the front and back side */
+.card-front-side2,
+.card-back-side2 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    -webkit-backface-visibility: hidden;
+    /* Safari; */
+    backface-visibility: hidden;
+}
+
+/** style the front side (fallback if image is missing) */
+.card-front-side2 {
+    background-color: #bbb;
+    color: black;
+}
+
+/** Style the back side */
+.card-back-side2 {
+    background-color: dodgerblue;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.the-board {
+    position: relative;
+    width: 575px;
+    height: 350px;
+    border: 6px solid rgba(165, 42, 42, 0.753);
+    border-radius: 9rem;
+    background-color: rgb(218, 233, 136);
+    box-shadow: var(--Shadow), inset 3px -3px 0px hsl(160, 90%, 71%), inset 3px 3px 0px hsl(160, 90%, 71%), inset -3px 3px 0px hsl(160, 90%, 71%), inset -3px -3px 0px hsl(160, 90%, 71%);
+    color: #faecec;
+    font-size: 18px;
+}
+
+.the-board>*:not(.hey) {
+    position: absolute;
+    width: 10% !important;
+    transition: all linear 3s;
+}
+
+.first-card {
+    bottom: 1rem;
+    right: 15rem;
+}
+
+.second-card {
+    bottom: 1.1rem;
+    right: 14.3rem;
+}
+
+.third-card {
+    /* border: 1px solid #63fa78; */
+    bottom: 1.2rem;
+    right: 13.6rem;
+}
+
+.fourth-card {
+    /* border: 1px solid #f787bf; */
+    bottom: 1.3rem;
+    right: 12.9rem;
+}
+
+.fifth-card {
+    /* border: 1px solid #7eff89; */
+    bottom: 1.4rem;
+    right: 12.2rem;
+}
+
+.split-first-card {
+    border: 1px solid hsl(0, 100%, 50%);
+    top: 9rem;
+    left: 5.2rem;
+}
+
+.split-second-card {
+    border: 1px solid hsl(0, 87%, 76%);
+    top: 8.9rem;
+    left: 5.7rem;
+}
+
+.split-third-card {
+    border: 1px solid hsl(234, 100%, 50%);
+    top: 9rem;
+    right: 5.2rem;
+}
+
+.split-fourth-card {
+    border: 1px solid hsl(27, 79%, 48%);
+    top: 8.9rem;
+    right: 5.7rem;
+}
+
+.dealers-1st-card {
+    top: 1.5rem;
+    left: 16rem;
+    z-index: 2;
+}
+
+.dealers-2nd-card {
+    top: 1.6rem;
+    left: 15.3rem;
+    z-index: 1;
+}
+
+.dealers-3rd-card {
+    /* border: 1px solid hsl(337, 93%, 29%); */
+    top: 1.7rem;
+    left: 14.6rem;
+    z-index: 0;
+}
+
+/* ^ Animations */

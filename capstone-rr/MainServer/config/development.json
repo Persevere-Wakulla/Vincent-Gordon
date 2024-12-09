@@ -1,0 +1,10 @@
+{
+"HOST":"http://localhost",
+"API":"/api",
+"MONGO_DB_URL":"mongodb://127.0.0.1/DevGordon",
+"PORT":8000,
+"ORIGIN":"http://localhost:5173",
+"METHODS":["GET","POST","PUT","DELETE"],
+"HEADERS":["Content-Type"]
+
+}
