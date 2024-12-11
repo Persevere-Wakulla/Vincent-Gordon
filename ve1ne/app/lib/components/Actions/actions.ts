@@ -3,13 +3,13 @@ import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 import { SignupFormSchema } from "@/lib/db/definitions";
 import { connectToDatabase } from "@/lib/db/db";
-import { User } from "@/lib/models/userModel";
+import { myUser } from "@/lib/models/userModel";
 import bcrypt from "bcrypt";
-
+import { deleteSession } from "@/lib/db/session";
 
 export async function signup(formData: FormData) {
 	await connectToDatabase();
-	
+
 	// Validate form fields
 	const validatedFields = SignupFormSchema.safeParse({
 		username: formData.get("username"),
@@ -18,29 +18,28 @@ export async function signup(formData: FormData) {
 	});
 
 	if (!validatedFields.success) throw new Error("Validation Falied");
-	
-		
+
 	const { username, email, password } = validatedFields.data;
 	// Check if user already exists
-	const existingUser = await User.exists({ email });
-	if (existingUser) throw new Error("Email already in use")
-	
-	const existingUsername = await User.exists({ username });
+	const existingUser = await myUser.exists({ email });
+	if (existingUser) throw new Error("Email already in use");
+
+	const existingUsername = await myUser.exists({ username });
 	if (existingUsername) throw new Error("Username already taken");
 	// Hash the password
 	const hashedPassword = await bcrypt.hash(password, 10);
 
 	// Create and save the new user
-	const user = new User({
-			username,
-			email,
-			password: hashedPassword,
-		});
+	const user = new myUser({
+		username,
+		email,
+		password: hashedPassword,
+	});
 
 	await user.save();
 
 	// Return a success message
-	return {success:true, message: "User created successfully"}
+	return { success: true, message: "User created successfully" };
 }
 
 export async function authenticate(
@@ -61,3 +60,7 @@ export async function authenticate(
 		throw error;
 	}
 }
+export async function logout() {
+	deleteSession()
+	
+  }

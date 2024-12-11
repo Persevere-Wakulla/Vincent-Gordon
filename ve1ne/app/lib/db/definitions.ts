@@ -37,3 +37,10 @@ export type FormState =
     email: string;
     password: string;
   };
+
+  export type SessionPayload = {
+    userId:string;
+    role:string;
+    expiresAt:Date;
+
+  }

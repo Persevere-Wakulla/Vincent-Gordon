@@ -4,8 +4,6 @@ import mongoose from "mongoose";
 const DB = process.env.DB_URL;
 
 
-console.log(DB);
-
 const connectToDatabase = async () => {
 	if(mongoose.connection.readyState === 0 ){
 

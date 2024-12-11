@@ -1,16 +1,17 @@
 // authOptions.ts
-import { authConfig } from "./auth.config";
+import { authConfig } from "@/auth.config";
 import Credentials from "next-auth/providers/credentials";
 import { connectToDatabase } from "@/lib/db/db";
 import type { UserType } from "@/lib/db/definitions";
-import { User } from "@/lib/models/userModel";
+import { myUser } from "@/lib/models/userModel";
 import { z } from "zod";
 import bcrypt from "bcrypt";
+import { createSession } from "@/lib/db/session";
 
 async function getUser(email: string): Promise<UserType | undefined> {
   await connectToDatabase();
   try {
-    const user = await User.findOne<UserType>(
+    const user = await myUser.findOne<UserType>(
       { email: email },
       "_id email password"
     ).exec();
@@ -52,6 +53,7 @@ export const authOptions = {
             );
             if (passwordsMatch) {
               console.log("Pass words match, returning user");
+              await createSession(user.id)
               return user;
             } else {
               console.log("Invalid Password");
@@ -77,7 +79,7 @@ export const authOptions = {
     },
     async session({ session, token }) {
       if (token) {
-        session.user.id = token.id;
+        session.user._id = token.id;
       }
       return session;
     },

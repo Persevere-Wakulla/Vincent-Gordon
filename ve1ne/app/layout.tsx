@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "@/ui/global.css";
 import React from "react";
-import  SessionProvider  from "./lib/components/sessionProvider";
+import  {Provider}  from "@/app/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +12,13 @@ export const metadata = {
 
 export default function RootLayout({
 	children,
-}: {
+}: Readonly<{
 	children: React.ReactNode;
-}) {
+}>) {
 	return (
 		<html lang="en">
 			<body className="overflow-hidden">
-				<SessionProvider>{children}</SessionProvider>
+				<Provider>{children}</Provider>
 			</body>
 		</html>
 	);

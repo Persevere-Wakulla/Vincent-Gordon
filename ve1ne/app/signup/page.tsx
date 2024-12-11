@@ -1,4 +1,4 @@
-"use client"
+
 import Link from "next/link";
 import HeaderImage from "@/lib/components/HeaderImage";
 import SignUpForm from "@/app/lib/components/RegisterComponent/signup-form";
